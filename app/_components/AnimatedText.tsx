@@ -3,7 +3,11 @@
 import React from "react";
 import { motion } from "framer-motion";
 
-const AnimatedTextWord = ({ text }) => {
+interface AnimatedTextWordProps {
+  text: string;
+}
+
+const AnimatedTextWord = ({ text }: AnimatedTextWordProps) => {
   const words = text.split(" ");
 
 // Variants for Container of words.

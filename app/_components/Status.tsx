@@ -3,7 +3,7 @@
 import { Card } from "@/components/ui/card"
 import { useState } from "react";
 import { Section } from "./Section"
-import { Work } from "./Work"
+import { Work, WorkProps } from "./Work"
 import { ContactCard } from "./ContactCard";
 import { SideProject } from "./SideProject"
 import {
@@ -16,7 +16,6 @@ import { ChevronLeftIcon, ChevronRightIcon } from '@heroicons/react/24/solid';
 
 
 export const Status = () => {
-  // Utilisation de useState pour gérer l'index du projet actuellement affiché
   const [currentProjectIndex, setCurrentProjectIndex] = useState(0);
 
   const nextSlide = () => {
@@ -42,7 +41,7 @@ export const Status = () => {
                   Image={SIDE_PROJECTS[currentProjectIndex].image}
                   title={SIDE_PROJECTS[currentProjectIndex].title}
                   description={SIDE_PROJECTS[currentProjectIndex].description}
-                  url={SIDE_PROJECTS[currentProjectIndex].url}
+                  url={SIDE_PROJECTS[currentProjectIndex].url || ""}
                 />
               </CarouselItem>
             </CarouselContent>
@@ -71,7 +70,7 @@ export const Status = () => {
           <p className="text-lg text-muted-foreground">Mon parcours</p>
           <div className="flex flex-col gap-2">
             {WORK.map((work, index) => (
-              <Work key={index} image={work.image} title={work.title} role={work.role} date={work.date} url={work.url} />
+              <Work key={index} image={work.image} title={work.title} role={work.role} date={work.date} />
             ))}
           </div>
           <p className="text-lg text-muted-foreground">Retrouvez-moi</p>
@@ -82,6 +81,13 @@ export const Status = () => {
     </Section>
   );
 };
+
+interface SideProjectProps {
+  image: string;
+  title: string;
+  description: string;
+  url: string;
+}
 
 
 const WORK: WorkProps[] = [
