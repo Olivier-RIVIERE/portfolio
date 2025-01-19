@@ -119,6 +119,12 @@ const WORK: WorkProps[] = [
 
 const SIDE_PROJECTS: SideProjectProps[] = [
   {
+    image: "systemSolar.png",
+    title: "Système Solaire",
+    description: "Le Système Solaire est une application interactive qui permet d'explorer les planètes et leurs satellites à travers des pages détaillées. 🌍✨",
+    url: "https://systemesolaire-rivoli.netlify.app/",
+  },
+  {
     image: "mealApp.png",
     title: "Meal App",
     description: "Meal App est une application qui permet de rechercher des recettes de plats en utilisant une API. 🍽️",
