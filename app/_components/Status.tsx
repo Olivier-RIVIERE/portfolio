@@ -121,25 +121,25 @@ const SIDE_PROJECTS: SideProjectProps[] = [
   {
     image: "systemSolar.png",
     title: "Système Solaire",
-    description: "Le Système Solaire est une application interactive qui permet d'explorer les planètes et leurs satellites à travers des pages détaillées. 🌍✨",
+    description: "Plonge dans l'univers fascinant du Système Solaire ! Explore les planètes, leurs satellites, et découvre des informations captivantes à travers une expérience interactive et visuellement immersive. 🌍✨ (Technologie : React)",
     url: "https://systemesolaire-rivoli.netlify.app/",
   },
   {
     image: "mealApp.png",
     title: "Meal App",
-    description: "Meal App est une application qui permet de rechercher des recettes de plats en utilisant une API. 🍽️",
+    description: "Meal App est une application qui permet de rechercher des recettes de plats en utilisant une API. 🍽️ (Technologie : React)",
     url: "https://meal-app-react-rivoli.netlify.app/",
   },
   {
     image: "genres.png",
     title: "Series App",
-    description: "Series App est une application qui permet de rechercher des séries, acteurs et genres en utilisant l'API TVMaze. 📺",
+    description: "Series App est une application qui permet de rechercher des séries, acteurs et genres en utilisant l'API TVMaze. 📺 (Technologie : React)",
     url: "https://series-app-react-rivoli.netlify.app/",
   },
   {
     image: "play_screenshot.png",
     title: "Galactic Fleet",
-    description: "Galactic Fleet est un jeu de tir dans l'espace où tu contrôles un vaisseau pour affronter des vagues d'ennemis. 🚀",
+    description: "Galactic Fleet est un jeu de tir dans l'espace où tu contrôles un vaisseau pour affronter des vagues d'ennemis. 🚀 (Technologie : Phaser.js)",
     url: "https://galaticfleet.netlify.app/",
   },
 ]
