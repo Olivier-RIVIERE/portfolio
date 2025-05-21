@@ -119,27 +119,33 @@ const WORK: WorkProps[] = [
 
 const SIDE_PROJECTS: SideProjectProps[] = [
   {
+    image: "studio_adraince.png",
+    title: "Studio Adriance",
+    description: "Site vitrine développé pour une décoratrice d’intérieur, mettant en valeur ses réalisations à travers un portfolio élégant. Le site intègre un système d’inscription/connexion, un espace administrateur, ainsi qu’un éditeur de moodboards interactifs permettant aux utilisateurs de créer et sauvegarder leurs inspirations déco. (Technologies : Symfony, React, MySQL)",
+    url: "https://studio-adriance.adriance-creer-rever.com/",
+  },
+  {
     image: "systemSolar.png",
     title: "Système Solaire",
-    description: "Plonge dans l'univers fascinant du Système Solaire ! Explore les planètes, leurs satellites, et découvre des informations captivantes à travers une expérience interactive et visuellement immersive. 🌍✨ (Technologie : React)",
+    description: "Plonge dans l'univers fascinant du Système Solaire ! Explore les planètes, leurs satellites, et découvre des informations captivantes à travers une expérience interactive et visuellement immersive. (Technologie : React)",
     url: "https://systemesolaire-rivoli.netlify.app/",
   },
   {
     image: "mealApp.png",
     title: "Meal App",
-    description: "Meal App est une application qui permet de rechercher des recettes de plats en utilisant une API. 🍽️ (Technologie : React)",
+    description: "Meal App est une application qui permet de rechercher des recettes de plats en utilisant une API. (Technologie : React)",
     url: "https://meal-app-react-rivoli.netlify.app/",
   },
   {
     image: "genres.png",
     title: "Series App",
-    description: "Series App est une application qui permet de rechercher des séries, acteurs et genres en utilisant l'API TVMaze. 📺 (Technologie : React)",
+    description: "Series App est une application qui permet de rechercher des séries, acteurs et genres en utilisant l'API TVMaze. (Technologie : React)",
     url: "https://series-app-react-rivoli.netlify.app/",
   },
   {
     image: "play_screenshot.png",
     title: "Galactic Fleet",
-    description: "Galactic Fleet est un jeu de tir dans l'espace où tu contrôles un vaisseau pour affronter des vagues d'ennemis. 🚀 (Technologie : Phaser.js)",
+    description: "Galactic Fleet est un jeu de tir dans l'espace où tu contrôles un vaisseau pour affronter des vagues d'ennemis. (Technologie : Phaser.js)",
     url: "https://galaticfleet.netlify.app/",
   },
 ]
