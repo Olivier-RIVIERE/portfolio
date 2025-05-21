@@ -119,7 +119,7 @@ const WORK: WorkProps[] = [
 
 const SIDE_PROJECTS: SideProjectProps[] = [
   {
-    image: "studio_adraince.png",
+    image: "studio_adriance.png",
     title: "Studio Adriance",
     description: "Site vitrine développé pour une décoratrice d’intérieur, mettant en valeur ses réalisations à travers un portfolio élégant. Le site intègre un système d’inscription/connexion, un espace administrateur, ainsi qu’un éditeur de moodboards interactifs permettant aux utilisateurs de créer et sauvegarder leurs inspirations déco. (Technologies : Symfony, React, MySQL)",
     url: "https://studio-adriance.adriance-creer-rever.com/",
