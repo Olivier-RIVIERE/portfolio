@@ -14,7 +14,9 @@ export const Skills = () => {
         <h2 className="pb-2 text-3xl font-semibold tracking-tight first:mt-0 text-primary">
           Mes compétences en évolution
         </h2>
-        <p className="text-gray-500 sm:text-xl dark:text-gray-400">Je présente ici les technologies que j&#39;apprends actuellement dans ma formation, afin de compléter mes bases et enrichir mes compétences en développement web.</p>
+        <p className="text-gray-500 sm:text-xl dark:text-gray-400">
+          Voici les technologies que je développe en ce moment, dans une démarche d’apprentissage continu et d’amélioration de mes projets.
+        </p>
       </div>
       <div className="space-y-8 md:grid md:grid-cols-3 lg:grid-cols-2 md:gap-12 md:space-y-0">
         <div>

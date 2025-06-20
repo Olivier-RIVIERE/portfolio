@@ -94,8 +94,8 @@ const WORK: WorkProps[] = [
   {
     image: "https://www.ceppic.fr/wp-content/themes/ceppic-child/dist/assets/images/header-primary/logo-ceppic-white.svg",
     title: "Ceppic",
-    role: "Formation",
-    date: "2024 - En cours"
+    role: "Formation Développeur Web & Web Mobile (titre professionnel de niveau 5)",
+    date: "2024 - 2025"
   },
   {
     image: "https://www.sncf-voyageurs.com/medias-publics/2023-07/logo-sncv.svg",

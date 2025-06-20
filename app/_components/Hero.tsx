@@ -8,12 +8,21 @@ export const Hero = () => {
   return (
     <Section className="flex max-md:flex-col items-start gap-4">
       <div className="flex-[3] w-full flex flex-col gap-2">
-        <AnimatedTextWord text="Olivier RIVIERE"/>
-        <AnimatedTextCharacter text="Développeur web en formation"/>
-        <p className="text-primary">Je m&apos;appelle Olivier et je suis actuellement en formation pour devenir développeur web. Passionné par les nouvelles <Code>technologies</Code>, je me suis lancé dans cette reconversion professionnelle après avoir exercé différents métiers. Aujourd&#39;hui, je me concentre sur <Code>l&apos;apprentissage</Code> des langages et des outils du web pour créer des expériences numériques modernes et fonctionnelles. Mon <Code>objectif</Code> est de mettre mes compétences au service de projets innovants et d&#39;évoluer dans ce domaine en pleine croissance.</p>
+        <AnimatedTextWord text="Olivier RIVIERE" />
+        <AnimatedTextCharacter text="Développeur web diplômé" />
+        <p className="text-primary">
+          Je m&apos;appelle Olivier, je suis développeur web diplômé après une reconversion professionnelle. Passionné par les <Code>technologies</Code> et la création d&apos;interfaces modernes, je conçois des sites clairs, fonctionnels et adaptés aux besoins réels.
+          Mon parcours m&apos;a appris à allier <Code>rigueur</Code>, <Code>écoute</Code> et <Code>créativité</Code>, pour proposer des solutions web sur-mesure. Aujourd&apos;hui, je suis disponible pour contribuer à des projets innovants, que ce soit en freelance ou en équipe.
+        </p>
       </div>
       <div className="flex-[2] max-md:m-auto ml-auto">
-        <Image src="/img/img-olivier.jpg" width={300} height={300} className="rounded-full h-auto max-w-xs max-md:w-56 m-auto shadow-xl transition-all duration-500 hover:scale-110 hover:shadow-[0_0_20px_rgba(255,255,255,0.6)]" alt="Olivier RIVIERE" />
+        <Image
+          src="/img/img-olivier2.jpg"
+          width={300}
+          height={300}
+          className="w-[300px] h-[300px] rounded-full object-cover m-auto shadow-xl transition-all duration-500 hover:scale-110 hover:shadow-[0_0_20px_rgba(255,255,255,0.6)]"
+          alt="Olivier RIVIERE"
+        />
 
       </div>
     </Section>
