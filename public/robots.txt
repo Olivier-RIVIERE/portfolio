@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://portfolio-olivier-riviere.vercel.app/sitemap.xml

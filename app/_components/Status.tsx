@@ -119,6 +119,13 @@ const WORK: WorkProps[] = [
 
 const SIDE_PROJECTS: SideProjectProps[] = [
   {
+    image: "boulangerie-presentation.png",
+    title: "Boulangerie du Fournil",
+    description:
+      "Site vitrine Next.js (App Router) pour une boulangerie artisanale : présentation de la maison, catalogue de produits, horaires & localisation, formulaire de contact et optimisations SEO locales.",
+    url: "https://boulangerie-presentation.netlify.app/",
+  },
+  {
     image: "studio_adriance.png",
     title: "Studio Adriance",
     description: "Site vitrine développé pour une décoratrice d’intérieur, mettant en valeur ses réalisations à travers un portfolio élégant. Le site intègre un système d’inscription/connexion, un espace administrateur, ainsi qu’un éditeur de moodboards interactifs permettant aux utilisateurs de créer et sauvegarder leurs inspirations déco. (Technologies : Symfony, React, MySQL)",
