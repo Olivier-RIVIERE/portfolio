@@ -49,14 +49,12 @@ export const Status = () => {
           <div className="flex justify-between w-full mt-4">
             <button
               onClick={prevSlide}
-              disabled={currentProjectIndex === 0}
               className="p-2 text-white rounded-full  hover:bg-accent/50 transition-colors group duration-300"
             >
               <ChevronLeftIcon className="w-6 h-6" />
             </button>
             <button
               onClick={nextSlide}
-              disabled={currentProjectIndex === SIDE_PROJECTS.length - 1}
               className="p-2 text-white rounded-full  hover:bg-accent/50 transition-colors group duration-300"
             >
               <ChevronRightIcon className="w-6 h-6" />
