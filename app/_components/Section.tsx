@@ -1,12 +1,13 @@
-import { cn } from "@/lib/utils"
-import { PropsWithChildren } from "react"
+import { cn } from "@/lib/utils";
+import type React from "react";
 
-export const Section = (props: PropsWithChildren<{ className?: string }>) => {
+type SectionProps = React.ComponentPropsWithoutRef<"section">;
+
+export const Section = ({ className, ...props }: SectionProps) => {
   return (
-    <section className={cn("max-w-6xl px-4 m-auto", props.className)}>
-      {props.children}
-
-    </section>
-
-  )
-}
+    <section
+      {...props}
+      className={cn("max-w-6xl px-4 m-auto", className)}
+    />
+  );
+};
