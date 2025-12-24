@@ -3,7 +3,6 @@ import { Code } from './Code'
 import AnimatedTextWord from './AnimatedText'
 import AnimatedTextCharacter from './AnimatedTextCharacter'
 import Image from 'next/image'
-import Link from 'next/link'
 
 export const Hero = () => {
   return (
