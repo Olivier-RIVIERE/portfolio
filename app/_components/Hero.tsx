@@ -7,7 +7,7 @@ import Image from 'next/image'
 export const Hero = () => {
   return (
     <Section className="flex max-md:flex-col items-start gap-4">
-      <div className="flex-[3] w-full flex flex-col gap-3">
+      <div className="flex-[3] w-full min-w-0 flex flex-col gap-3">
         <AnimatedTextWord text="Olivier RIVIERE" />
         <AnimatedTextCharacter text="Création de sites vitrines pour artisans" />
 

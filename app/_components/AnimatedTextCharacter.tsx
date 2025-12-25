@@ -36,25 +36,15 @@ const AnimatedTextCharacter = ({ text, className }: AnimatedTextCharacterProps) 
 
   return (
     <motion.div
-      className={className}
-      style={{
-        overflow: "hidden",
-        display: "inline-block",
-        fontSize: "1.5rem",
-        lineHeight: 1.2,
-        whiteSpace: "normal",
-      }}
+      className={`text-xl sm:text-2xl lg:text-3xl ${className ?? ""}`}
+      style={{ overflow: "hidden", display: "flex" }} // enlève fontSize inline
       variants={container}
       initial="hidden"
       animate="visible"
     >
       {letters.map((letter, index) => (
-        <motion.span
-          variants={child}
-          key={index}
-          style={{ display: "inline-block" }}
-        >
-          {letter}
+        <motion.span variants={child} key={index}>
+          {letter === " " ? "\u00A0" : letter}
         </motion.span>
       ))}
     </motion.div>
