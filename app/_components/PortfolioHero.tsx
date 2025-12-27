@@ -28,7 +28,12 @@ export const PortfolioHero = () => {
                     src="/img/img-olivier2.jpg"
                     width={300}
                     height={300}
-                    className="w-[300px] h-[300px] rounded-full object-cover m-auto shadow-xl transition-all duration-500 hover:scale-110 hover:shadow-[0_0_20px_rgba(255,255,255,0.6)]"
+                    className="w-[300px] h-[300px] rounded-full object-cover m-auto shadow-xl
+  transition-all duration-500
+  grayscale-[35%] hover:grayscale-0
+  ring-1 ring-white/5 hover:ring-white/20
+  motion-safe:hover:scale-110 motion-safe:hover:shadow-[0_0_20px_rgba(255,255,255,0.6)]
+  motion-reduce:hover:scale-100 motion-reduce:hover:shadow-xl"
                     alt="Olivier RIVIERE"
                 />
             </div>

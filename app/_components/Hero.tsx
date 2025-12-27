@@ -9,7 +9,7 @@ export const Hero = () => {
     <Section className="flex max-md:flex-col items-start gap-4">
       <div className="flex-[3] w-full min-w-0 flex flex-col gap-3">
         <AnimatedTextWord text="Olivier RIVIERE" />
-        <AnimatedTextCharacter text="Création de sites vitrines pour artisans" />
+        <AnimatedTextCharacter text="Création de sites vitrines pour Indépendants" />
 
         <p className="text-primary">
           Je crée pour vous des sites vitrines <Code>clairs</Code>, <Code>rapides</Code>, conçus pour inspirer confiance et faciliter la prise de contact.
@@ -38,12 +38,17 @@ export const Hero = () => {
         </p>
       </div>
 
-      <div className="flex-[2] max-md:m-auto ml-auto">
+      <div className="flex-[2] max-md:m-auto ml-auto shrink-0">
         <Image
           src="/img/img-olivier2.jpg"
           width={300}
           height={300}
-          className="w-[300px] h-[300px] rounded-full object-cover m-auto shadow-xl transition-all duration-500 hover:scale-110 hover:shadow-[0_0_20px_rgba(255,255,255,0.6)]"
+          className="w-[300px] h-[300px] rounded-full object-cover m-auto shadow-xl
+  transition-all duration-500
+  grayscale-[35%] hover:grayscale-0
+  ring-1 ring-white/5 hover:ring-white/20
+  motion-safe:hover:scale-110 motion-safe:hover:shadow-[0_0_20px_rgba(255,255,255,0.6)]
+  motion-reduce:hover:scale-100 motion-reduce:hover:shadow-xl"
           alt="Olivier RIVIERE"
         />
       </div>

@@ -9,14 +9,14 @@ import { Pricing } from './_components/Pricing';
 import { FaqMini } from "./_components/FaqMini";
 
 export const metadata: Metadata = {
-  title: "Création de site vitrine pour artisans | Olivier Rivière (Rouen)",
+  title: "Création de site vitrine pour Indépendants & TPE | Olivier Rivière (Rouen)",
   description:
     "Développeur web freelance à Rouen : création de sites vitrines rapides, clairs et sans coût caché. Packs transparents, contact simple par email.",
   openGraph: {
-    title: "Création de site vitrine pour artisans | Olivier Rivière (Rouen)",
+    title: "Création de site vitrine pour Indépendants & TPE | Olivier Rivière (Rouen)",
     description:
       "Création de sites vitrines : packs transparents, prix affichés, aucun coût caché.",
-    url: "https://portfolio-olivier-riviere.vercel.app/",
+    url: "https://olivier-riviere-web.vercel.app/",
     siteName: "Olivier Rivière",
     locale: "fr_FR",
     type: "website",

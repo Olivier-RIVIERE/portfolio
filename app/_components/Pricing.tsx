@@ -2,6 +2,8 @@ import { Section } from "./Section"
 import { Code } from "./Code"
 import { Badge } from "@/components/ui/badge"
 import { Card } from "@/components/ui/card"
+import Link from "next/link"
+
 
 export const Pricing = () => {
   return (
@@ -93,6 +95,13 @@ export const Pricing = () => {
         <p className="text-primary">
           <Code>Après livraison</Code> : 3 mois de suivi inclus, puis maintenance optionnelle 69€ TTC / mois.
         </p>
+
+        <Link
+          href="/creation-site-internet-etapes"
+          className="inline-flex w-fit items-center justify-center rounded-md px-5 py-2 text-sm font-medium bg-white/10 hover:bg-white/15 transition"
+        >
+          Comment ça se passe ? (Les étapes de A à Z)
+        </Link>
 
         <a
           href="mailto:olivier.riviere.dev@gmail.com?subject=Demande%20devis%20site%20vitrine&body=Bonjour,%0A%0AJe%20souhaite%20un%20devis%20pour%20un%20site%20vitrine.%0AActivit%C3%A9%20:%20%0AVille%20:%20%0APack%20vis%C3%A9%20(Essentiel/Avanc%C3%A9)%20:%20%0ANombre%20de%20pages%20:%20%0AD%C3%A9lai%20:%20%0A%0AMerci"

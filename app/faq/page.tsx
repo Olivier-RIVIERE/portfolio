@@ -20,11 +20,11 @@ export const metadata: Metadata = {
 
 export default function FaqPage() {
   return (
-    <main className="relative">
+    <main className="relative min-h-screen flex flex-col">
       <Header variant="client" />
       <Spacing size="md" />
 
-      <Section className="flex flex-col gap-4">
+      <Section className="flex flex-col gap-4 flex-1">
         <h1 className="text-3xl font-semibold tracking-tight text-primary">
           FAQ
         </h1>

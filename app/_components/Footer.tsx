@@ -1,16 +1,13 @@
-"use client";
+"use client"
 
-import Link from "next/link";
-import { Section } from "./Section";
-import { FaArrowUp } from "react-icons/fa";
+import Link from "next/link"
+import { Section } from "./Section"
+import { FaArrowUp } from "react-icons/fa"
 
 export const Footer = () => {
   const scrollToTop = () => {
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth",
-    });
-  };
+    window.scrollTo({ top: 0, behavior: "smooth" })
+  }
 
   return (
     <footer className="bg-card relative">
@@ -25,11 +22,19 @@ export const Footer = () => {
       </button>
 
       <Section className="flex flex-col items-center justify-center py-8 gap-2">
-        <div className="flex items-center gap-4 text-sm">
+        <div className="flex flex-wrap items-center justify-center gap-x-4 gap-y-2 text-sm">
+          <Link href="/" className="text-muted-foreground hover:text-primary transition-colors">
+            Accueil
+          </Link>
+
           <Link
-            href="/faq"
+            href="/creation-site-internet-etapes"
             className="text-muted-foreground hover:text-primary transition-colors"
           >
+            Les étapes (A à Z)
+          </Link>
+
+          <Link href="/faq" className="text-muted-foreground hover:text-primary transition-colors">
             FAQ
           </Link>
 
@@ -46,5 +51,5 @@ export const Footer = () => {
         </p>
       </Section>
     </footer>
-  );
-};
+  )
+}

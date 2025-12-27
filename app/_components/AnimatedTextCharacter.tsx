@@ -36,7 +36,7 @@ const AnimatedTextCharacter = ({ text, className }: AnimatedTextCharacterProps) 
 
   return (
     <motion.div
-      className={`text-xl sm:text-2xl lg:text-3xl ${className ?? ""}`}
+      className={`text-lg sm:text-xl lg:text-3xl ${className ?? ""}`}
       style={{ overflow: "hidden", display: "flex" }} // enlève fontSize inline
       variants={container}
       initial="hidden"
