@@ -117,6 +117,13 @@ const WORK: WorkProps[] = [
 
 const SIDE_PROJECTS: SideProjectProps[] = [
   {
+    image: "mon-suivi-emploi.png",
+    title: "Mon Suivi Emploi",
+    description:
+      "Application web Next.js 15 (App Router) de suivi de candidatures : tableau Kanban interactif, gestion complète des candidatures (ajout, édition, statuts), authentification sécurisée via Supabase Auth et base de données PostgreSQL avec Row Level Security (RLS).",
+    url: "https://mon-suivi-emploi.vercel.app/",
+  },
+  {
     image: "boulangerie-presentation.png",
     title: "Boulangerie du Fournil",
     description:
