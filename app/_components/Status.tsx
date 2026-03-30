@@ -30,10 +30,12 @@ export const Status = () => {
   }
 
   return (
-    <Section className="flex max-md:flex-col items-start gap-4">
-      <div className="flex-[3] w-full">
-        <Card className="flex flex-col p-4">
+    <Section className="flex max-md:flex-col items-stretch gap-4">
+      <div className="flex-[3] w-full flex flex-col">
+        <Card className="flex flex-col p-4 flex-1">
           <p className="text-lg text-muted-foreground">Mes projets</p>
+
+          {/* Carousel avec hauteur fixe */}
           <Carousel className="w-full">
             <CarouselContent className="w-full h-96 ms-0">
               <CarouselItem className="w-full">
@@ -47,33 +49,37 @@ export const Status = () => {
             </CarouselContent>
           </Carousel>
 
-          {/* Lien vers la page détail */}
-          <Link
-            href={`/projects/${PROJECTS[currentProjectIndex].slug}`}
-            className="mt-2 text-xs text-muted-foreground hover:text-primary underline transition-colors"
-          >
-            En savoir plus sur ce projet →
-          </Link>
+          {/* Footer fixe de la card — aligné en bas */}
+          <div className="flex items-center justify-between mt-3">
+            {/* Lien détail — à gauche */}
+            <Link
+              href={`/projects/${PROJECTS[currentProjectIndex].slug}`}
+              className="text-xs text-muted-foreground hover:text-primary underline transition-colors"
+            >
+              En savoir plus sur ce projet →
+            </Link>
 
-          <div className="flex justify-between w-full mt-4">
-            <button
-              onClick={prevSlide}
-              className="p-2 text-white rounded-full hover:bg-accent/50 transition-colors duration-300"
-            >
-              <ChevronLeftIcon className="w-6 h-6" />
-            </button>
-            <button
-              onClick={nextSlide}
-              className="p-2 text-white rounded-full hover:bg-accent/50 transition-colors duration-300"
-            >
-              <ChevronRightIcon className="w-6 h-6" />
-            </button>
+            {/* Flèches navigation — à droite */}
+            <div className="flex items-center gap-2">
+              <button
+                onClick={prevSlide}
+                className="p-2 text-white rounded-full hover:bg-accent/50 transition-colors duration-300"
+              >
+                <ChevronLeftIcon className="w-6 h-6" />
+              </button>
+              <button
+                onClick={nextSlide}
+                className="p-2 text-white rounded-full hover:bg-accent/50 transition-colors duration-300"
+              >
+                <ChevronRightIcon className="w-6 h-6" />
+              </button>
+            </div>
           </div>
         </Card>
       </div>
 
       <div className="flex-[2] flex flex-col gap-4 w-full">
-        <Card className="w-full flex flex-col gap-2 p-4">
+        <Card className="w-full flex flex-col gap-2 p-4 flex-1">
           <p className="text-lg text-muted-foreground">Mon parcours</p>
           <div className="flex flex-col gap-2">
             {WORK.map((work, index) => (

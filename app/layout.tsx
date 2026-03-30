@@ -27,6 +27,40 @@ export const metadata: Metadata = {
   description: "The portfolio of Olivier RIVIERE, web developer.",
 };
 
+const GeometricBackground = () => (
+  <div className="fixed inset-0 -z-10 overflow-hidden pointer-events-none">
+
+    {/* Grille de points */}
+    <div
+      className="absolute inset-0 opacity-[0.15]"
+      style={{
+        backgroundImage: `radial-gradient(circle, hsl(213 95% 65% / 0.5) 1px, transparent 1px)`,
+        backgroundSize: "32px 32px",
+      }}
+    />
+
+    {/* Blob bleu électrique — haut droite */}
+    <div
+      className="absolute -top-40 -right-40 w-[600px] h-[600px] rounded-full opacity-[0.07]"
+      style={{
+        background: "radial-gradient(circle, hsl(213 95% 65%) 0%, transparent 70%)",
+      }}
+    />
+
+    {/* Blob bleu plus froid — bas gauche */}
+    <div
+      className="absolute -bottom-60 -left-40 w-[500px] h-[500px] rounded-full opacity-[0.05]"
+      style={{
+        background: "radial-gradient(circle, hsl(222 80% 60%) 0%, transparent 70%)",
+      }}
+    />
+
+    {/* Ligne horizontale décorative — séparation subtile */}
+    <div className="absolute top-[35%] left-0 right-0 h-px bg-gradient-to-r from-transparent via-accent/20 to-transparent" />
+
+  </div>
+)
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -45,6 +79,7 @@ export default function RootLayout({
           fontFamily: "'Geist Sans', 'Geist Mono', 'DM Serif Text', sans-serif",
         }}
       >
+        <GeometricBackground />
         {children}
       </body>
     </html>
