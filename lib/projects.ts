@@ -9,6 +9,7 @@ export type Project = {
   longDescription: string
   challenges?: string
   whatILearned?: string
+  features?: string[]
 }
 
 export const PROJECTS: Project[] = [
