@@ -41,7 +41,7 @@ export const Footer = () => {
         </div>
 
         <p className="text-muted-foreground text-sm text-center">
-          © 2025 Olivier Riviere. Construit avec Next.js et Tailwind CSS.
+          © {new Date().getFullYear()} Olivier Riviere. Construit avec Next.js et Tailwind CSS.
         </p>
       </Section>
     </footer>

@@ -1,10 +1,10 @@
 "use client"
 
 import { Card } from "@/components/ui/card"
-import { useState } from "react";
+import { useState } from "react"
 import { Section } from "./Section"
 import { Work, WorkProps } from "./Work"
-import { ContactCard } from "./ContactCard";
+import { ContactCard } from "./ContactCard"
 import { SideProject } from "./SideProject"
 import {
   Carousel,
@@ -12,50 +12,59 @@ import {
   CarouselItem,
 } from "@/components/ui/carousel"
 import * as React from "react"
-import { ChevronLeftIcon, ChevronRightIcon } from '@heroicons/react/24/solid';
-
+import { ChevronLeftIcon, ChevronRightIcon } from "@heroicons/react/24/solid"
+import { PROJECTS } from "@/lib/projects"
+import Link from "next/link"
 
 export const Status = () => {
-  const [currentProjectIndex, setCurrentProjectIndex] = useState(0);
+  const [currentProjectIndex, setCurrentProjectIndex] = useState(0)
 
   const nextSlide = () => {
-    setCurrentProjectIndex((prevIndex) => (prevIndex + 1) % SIDE_PROJECTS.length);
-  };
+    setCurrentProjectIndex((prevIndex) => (prevIndex + 1) % PROJECTS.length)
+  }
 
   const prevSlide = () => {
-    setCurrentProjectIndex((prevIndex) => (prevIndex - 1 + SIDE_PROJECTS.length) % SIDE_PROJECTS.length);
-  };
-
-
+    setCurrentProjectIndex(
+      (prevIndex) => (prevIndex - 1 + PROJECTS.length) % PROJECTS.length
+    )
+  }
 
   return (
     <Section className="flex max-md:flex-col items-start gap-4">
       <div className="flex-[3] w-full">
         <Card className="flex flex-col p-4">
           <p className="text-lg text-muted-foreground">Mes projets</p>
-          <Carousel
-            className="w-full">
+          <Carousel className="w-full">
             <CarouselContent className="w-full h-96 ms-0">
               <CarouselItem className="w-full">
                 <SideProject
-                  Image={SIDE_PROJECTS[currentProjectIndex].image}
-                  title={SIDE_PROJECTS[currentProjectIndex].title}
-                  description={SIDE_PROJECTS[currentProjectIndex].description}
-                  url={SIDE_PROJECTS[currentProjectIndex].url || ""}
+                  Image={PROJECTS[currentProjectIndex].image}
+                  title={PROJECTS[currentProjectIndex].title}
+                  description={PROJECTS[currentProjectIndex].description}
+                  url={PROJECTS[currentProjectIndex].url}
                 />
               </CarouselItem>
             </CarouselContent>
           </Carousel>
+
+          {/* Lien vers la page détail */}
+          <Link
+            href={`/projects/${PROJECTS[currentProjectIndex].slug}`}
+            className="mt-2 text-xs text-muted-foreground hover:text-primary underline transition-colors"
+          >
+            En savoir plus sur ce projet →
+          </Link>
+
           <div className="flex justify-between w-full mt-4">
             <button
               onClick={prevSlide}
-              className="p-2 text-white rounded-full  hover:bg-accent/50 transition-colors group duration-300"
+              className="p-2 text-white rounded-full hover:bg-accent/50 transition-colors duration-300"
             >
               <ChevronLeftIcon className="w-6 h-6" />
             </button>
             <button
               onClick={nextSlide}
-              className="p-2 text-white rounded-full  hover:bg-accent/50 transition-colors group duration-300"
+              className="p-2 text-white rounded-full hover:bg-accent/50 transition-colors duration-300"
             >
               <ChevronRightIcon className="w-6 h-6" />
             </button>
@@ -68,98 +77,59 @@ export const Status = () => {
           <p className="text-lg text-muted-foreground">Mon parcours</p>
           <div className="flex flex-col gap-2">
             {WORK.map((work, index) => (
-              <Work key={index} image={work.image} title={work.title} role={work.role} date={work.date} />
+              <Work
+                key={index}
+                image={work.image}
+                title={work.title}
+                role={work.role}
+                date={work.date}
+              />
             ))}
           </div>
           <p className="text-lg text-muted-foreground">Retrouvez-moi</p>
-          <ContactCard url="https://github.com/Olivier-RIVIERE" image="https://avatars.githubusercontent.com/u/164056469?v=4" mediumImage="https://cdn.svgporn.com/logos/github-icon.svg" name="Olivier Riviere" description="https://github.com/Olivier-RIVIERE" />
-          <ContactCard url="https://www.linkedin.com/in/olivierriviere/" image="https://avatars.githubusercontent.com/u/164056469?v=4" mediumImage="https://cdn.svgporn.com/logos/linkedin-icon.svg" name="Olivier Riviere" description="https://www.linkedin.com/in/olivierriviere/" />
+          <ContactCard
+            url="https://github.com/Olivier-RIVIERE"
+            image="https://avatars.githubusercontent.com/u/164056469?v=4"
+            mediumImage="https://cdn.svgporn.com/logos/github-icon.svg"
+            name="Olivier Riviere"
+            description="https://github.com/Olivier-RIVIERE"
+          />
+          <ContactCard
+            url="https://www.linkedin.com/in/olivierriviere/"
+            image="https://avatars.githubusercontent.com/u/164056469?v=4"
+            mediumImage="https://cdn.svgporn.com/logos/linkedin-icon.svg"
+            name="Olivier Riviere"
+            description="https://www.linkedin.com/in/olivierriviere/"
+          />
         </Card>
       </div>
     </Section>
-  );
-};
-
-interface SideProjectProps {
-  image: string;
-  title: string;
-  description: string;
-  url: string;
+  )
 }
-
 
 const WORK: WorkProps[] = [
   {
     image: "https://www.ceppic.fr/wp-content/themes/ceppic-child/dist/assets/images/header-primary/logo-ceppic-white.svg",
     title: "Ceppic",
     role: "Formation Développeur Web & Web Mobile (titre professionnel de niveau 5)",
-    date: "2024 - 2025"
+    date: "2024 - 2025",
   },
   {
     image: "https://www.sncf-voyageurs.com/medias-publics/2023-07/logo-sncv.svg",
     title: "SNCF Voyageurs",
     role: "Conducteur de train",
-    date: "2021 - 2024"
+    date: "2021 - 2024",
   },
   {
     image: "https://scat.fr/wp-content/uploads/2023/09/Logo-SCAT-RVB.png",
     title: "SCAT",
-    role: "Agent de contrôle / Plannificateur",
-    date: "2014 - 2021"
+    role: "Agent de contrôle / Planificateur",
+    date: "2014 - 2021",
   },
   {
     image: "https://imgs.search.brave.com/1Vk8vp43EU-oG2A6u0kjJfrlWHGDbd92sgueCG5h_i8/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly91cGxv/YWQud2lraW1lZGlh/Lm9yZy93aWtpcGVk/aWEvY29tbW9ucy90/aHVtYi9hL2E3L0dl/bmRhcm1lcmllX25h/dGlvbmFsZV9sb2dv/LnN2Zy82NDBweC1H/ZW5kYXJtZXJpZV9u/YXRpb25hbGVfbG9n/by5zdmcucG5n",
     title: "Gendarmerie Nationale",
     role: "Gendarme Adjoint Volontaire",
-    date: "2010 - 2014"
+    date: "2010 - 2014",
   },
 ]
-
-const SIDE_PROJECTS: SideProjectProps[] = [
-  {
-    image: "mon-suivi-emploi.png",
-    title: "Mon Suivi Emploi",
-    description:
-      "Application web Next.js 15 (App Router) de suivi de candidatures : tableau Kanban interactif, gestion complète des candidatures (ajout, édition, statuts), authentification sécurisée via Supabase Auth et base de données PostgreSQL avec Row Level Security (RLS).",
-    url: "https://mon-suivi-emploi.vercel.app/",
-  },
-  {
-    image: "boulangerie-presentation.png",
-    title: "Boulangerie du Fournil",
-    description:
-      "Site vitrine Next.js (App Router) pour une boulangerie artisanale : présentation de la maison, catalogue de produits, horaires & localisation, formulaire de contact et optimisations SEO locales.",
-    url: "https://boulangerie-presentation.netlify.app/",
-  },
-  {
-    image: "studio_adriance.png",
-    title: "Studio Adriance",
-    description: "Site vitrine développé pour une décoratrice d’intérieur, mettant en valeur ses réalisations à travers un portfolio élégant. Le site intègre un système d’inscription/connexion, un espace administrateur, ainsi qu’un éditeur de moodboards interactifs permettant aux utilisateurs de créer et sauvegarder leurs inspirations déco. (Technologies : Symfony, React, MySQL)",
-    url: "https://studio-adriance.adriance-creer-rever.com/",
-  },
-  {
-    image: "systemSolar.png",
-    title: "Système Solaire",
-    description: "Plonge dans l'univers fascinant du Système Solaire ! Explore les planètes, leurs satellites, et découvre des informations captivantes à travers une expérience interactive et visuellement immersive. (Technologie : React)",
-    url: "https://systemesolaire-rivoli.netlify.app/",
-  },
-  {
-    image: "mealApp.png",
-    title: "Meal App",
-    description: "Meal App est une application qui permet de rechercher des recettes de plats en utilisant une API. (Technologie : React)",
-    url: "https://meal-app-react-rivoli.netlify.app/",
-  },
-  {
-    image: "genres.png",
-    title: "Series App",
-    description: "Series App est une application qui permet de rechercher des séries, acteurs et genres en utilisant l'API TVMaze. (Technologie : React)",
-    url: "https://series-app-react-rivoli.netlify.app/",
-  },
-  {
-    image: "play_screenshot.png",
-    title: "Galactic Fleet",
-    description: "Galactic Fleet est un jeu de tir dans l'espace où tu contrôles un vaisseau pour affronter des vagues d'ennemis. (Technologie : Phaser.js)",
-    url: "https://galaticfleet.netlify.app/",
-  },
-]
-
-
