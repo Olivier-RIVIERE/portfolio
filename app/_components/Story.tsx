@@ -3,50 +3,36 @@ import { Code } from "./Code"
 import { Badge } from "@/components/ui/badge"
 import { Card } from "@/components/ui/card"
 
-type StoryProps = {
-  title?: string
-  variant?: "short" | "long"
-}
-
-export const Story = ({
-  title = "Pourquoi je fais ce métier",
-  variant = "short",
-}: StoryProps) => {
+export const Story = () => {
   return (
     <Section className="flex flex-col items-start gap-4">
       <Badge variant={"outline"} className="text-muted-foreground">
-        À propos
+        Parcours
       </Badge>
 
       <h2 className="pb-2 text-3xl font-semibold tracking-tight first:mt-0 text-primary">
-        {title}
+        Pourquoi je me suis reconverti dans le web
       </h2>
 
       <Card className="w-full p-4">
-        {variant === "short" ? (
+        <div className="flex flex-col gap-3">
           <p className="text-primary leading-relaxed">
-            Après plusieurs années dans des métiers de terrain, j’ai choisi de me reconvertir dans le développement web
-            pour construire des solutions <Code>claires</Code> et <Code>utiles</Code>.
-            Aujourd’hui, j’accompagne des artisans et indépendants avec des sites vitrines simples, rapides et rassurants.
+            Mon parcours est atypique : gendarme adjoint, contrôleur et planificateur dans les transports,
+            puis <Code>conducteur de train à la SNCF</Code>. Des métiers très différents, mais avec un fil commun —
+            la rigueur, le sens des responsabilités et l'habitude de gérer des situations complexes.
           </p>
-        ) : (
-          <div className="flex flex-col gap-3">
-            <p className="text-primary leading-relaxed">
-              Je viens d’un parcours très “terrain” : rigueur, sens du service, et habitudes de travail structurées.
-              À un moment, j’ai eu envie de créer plutôt que d’exécuter, et j’ai choisi le développement web.
-            </p>
 
-            <p className="text-primary leading-relaxed">
-              Ce qui me plaît : transformer un besoin concret en un site lisible, rapide, et agréable à utiliser.
-              J’aime quand c’est <Code>simple</Code>, quand c’est <Code>propre</Code>, et quand le client comprend ce qu’il achète.
-            </p>
+          <p className="text-primary leading-relaxed">
+            En 2024, j'ai tout arrêté pour faire un pari sur moi-même : une formation intensive de 9 mois
+            en développement web et web mobile. Obtention du <Code>titre professionnel bac+2</Code> en juin 2025.
+            Pas une reconversion par défaut — un choix réfléchi vers quelque chose qui me passionne vraiment.
+          </p>
 
-            <p className="text-primary leading-relaxed">
-              Aujourd’hui, je propose des packs de sites vitrines transparents, sans surprise, avec un accompagnement clair
-              du début à la mise en ligne.
-            </p>
-          </div>
-        )}
+          <p className="text-primary leading-relaxed">
+            Ce que j'apporte : une vraie capacité d'<Code>adaptation</Code>, l'habitude de travailler en autonomie,
+            et une approche pragmatique du code. J'aime que ce soit <Code>propre</Code>, lisible, et que ça serve vraiment à quelque chose.
+          </p>
+        </div>
       </Card>
     </Section>
   )

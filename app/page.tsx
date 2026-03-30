@@ -1,45 +1,41 @@
 import type { Metadata } from "next";
 import { Header } from './_components/Header';
-import { Hero } from './_components/Hero';
 import { Spacing } from './_components/Spacing';
+import { Status } from './_components/Status';
+import { Skills } from './_components/Skills';
 import { Contact } from './_components/Contact';
 import { Footer } from './_components/Footer';
+import { PortfolioHero } from './_components/PortfolioHero';
 import { Story } from './_components/Story';
-import { Pricing } from './_components/Pricing';
-import { FaqMini } from "./_components/FaqMini";
 
 export const metadata: Metadata = {
-  title: "Création de site vitrine pour Indépendants & TPE | Olivier Rivière (Rouen)",
+  title: "Olivier Rivière — Développeur Web | Next.js · TypeScript · React",
   description:
-    "Développeur web freelance à Rouen : création de sites vitrines rapides, clairs et sans coût caché. Packs transparents, contact simple par email.",
+    "Portfolio de développeur web fullstack. Projets, compétences (Next.js, React, TypeScript, Tailwind, Node.js, Symfony) et parcours. Basé en Normandie, disponible en France.",
   openGraph: {
-    title: "Création de site vitrine pour Indépendants & TPE | Olivier Rivière (Rouen)",
-    description:
-      "Création de sites vitrines : packs transparents, prix affichés, aucun coût caché.",
-    url: "https://olivier-riviere-web.vercel.app/",
+    title: "Olivier Rivière — Développeur Web",
+    description: "Portfolio développeur web : projets, compétences, parcours.",
+    url: "https://portfolio-olivier-riviere.vercel.app/",
     siteName: "Olivier Rivière",
     locale: "fr_FR",
     type: "website",
   },
-  twitter: {
-    card: "summary_large_image",
-  },
-}
+};
 
 export default function Home() {
   return (
     <main className="relative">
-      <Header variant="client" />
+      <Header />
       <Spacing size='md' />
-      <Hero />
+      <PortfolioHero />
+      <Spacing size="md" />
+      <Story />
+      <Spacing size="md" />
+      <Status />
       <Spacing size='md' />
-      <Story variant="short" title="Pourquoi je fais ce métier" />
+      <Skills />
       <Spacing size='md' />
-      <Pricing />
-      <Spacing size='md' />
-      <FaqMini />
-      <Spacing size='md' />
-      <Contact variant="client" />
+      <Contact />
       <Spacing size='md' />
       <Footer />
     </main>

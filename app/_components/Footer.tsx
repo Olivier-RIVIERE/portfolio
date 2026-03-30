@@ -26,24 +26,18 @@ export const Footer = () => {
           <Link href="/" className="text-muted-foreground hover:text-primary transition-colors">
             Accueil
           </Link>
-
-          <Link
-            href="/creation-site-internet-etapes"
-            className="text-muted-foreground hover:text-primary transition-colors"
-          >
-            Les étapes (A à Z)
-          </Link>
-
-          <Link href="/faq" className="text-muted-foreground hover:text-primary transition-colors">
-            FAQ
-          </Link>
-
-          <a
-            href="mailto:olivier.riviere.dev@gmail.com?subject=Question%20-%20Site%20vitrine"
-            className="text-muted-foreground hover:text-primary transition-colors"
-          >
+          <a href="mailto:olivier.riviere.dev@gmail.com"
+            className="text-muted-foreground hover:text-primary transition-colors">
             Contact
           </a>
+          <Link href="https://github.com/Olivier-RIVIERE" target="_blank"
+            className="text-muted-foreground hover:text-primary transition-colors">
+            GitHub
+          </Link>
+          <Link href="https://www.linkedin.com/in/olivierriviere/" target="_blank"
+            className="text-muted-foreground hover:text-primary transition-colors">
+            LinkedIn
+          </Link>
         </div>
 
         <p className="text-muted-foreground text-sm text-center">
