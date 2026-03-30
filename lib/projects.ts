@@ -17,16 +17,23 @@ export const PROJECTS: Project[] = [
     image: "mon-suivi-emploi.png",
     title: "Mon Suivi Emploi",
     description:
-      "Application web Next.js 15 de suivi de candidatures : tableau Kanban interactif, authentification Supabase et base PostgreSQL avec RLS.",
+      "Application Next.js 15 de suivi de candidatures : Kanban interactif, scoring IA des offres, préparation d'entretien par IA et mode démo sans inscription.",
     url: "https://mon-suivi-emploi.vercel.app/",
     github: "https://github.com/Olivier-RIVIERE/mon-suivi-emploi",
-    techs: ["Next.js 15", "TypeScript", "Tailwind CSS", "Supabase", "PostgreSQL"],
+    techs: ["Next.js 15", "TypeScript", "Tailwind CSS", "Supabase", "PostgreSQL", "Mistral AI"],
     longDescription:
-      "Application complète de suivi de candidatures avec un tableau Kanban interactif. L'utilisateur peut créer des colonnes, déplacer des cartes, et suivre l'avancement de chaque candidature. L'authentification est gérée via Supabase Auth avec Row Level Security pour isoler les données de chaque utilisateur.",
+      "Application complète de suivi de candidatures avec un tableau Kanban interactif. L'utilisateur peut créer des colonnes, déplacer des cartes et suivre l'avancement de chaque candidature. L'authentification est gérée via Supabase Auth avec Row Level Security pour isoler les données de chaque utilisateur. Un système de démo permet de tester toutes les fonctionnalités sans créer de compte.",
     challenges:
-      "La gestion du drag & drop côté client tout en maintenant la cohérence avec la base de données en temps réel a été le principal défi technique.",
+      "La gestion du drag & drop côté client tout en maintenant la cohérence avec la base de données en temps réel a été le principal défi technique. L'intégration de l'IA a nécessité de concevoir des prompts précis pour obtenir des résultats exploitables et cohérents.",
     whatILearned:
-      "Maîtrise de Supabase (Auth + RLS), gestion d'état complexe avec React, et déploiement sur Vercel avec variables d'environnement.",
+      "Maîtrise de Supabase (Auth + RLS), intégration de l'API Mistral dans une app Next.js, gestion d'état complexe avec React, et déploiement sur Vercel avec variables d'environnement sécurisées.",
+    features: [
+      "Tableau Kanban interactif avec drag & drop",
+      "Scoring IA : note sur 100 de compatibilité CV / offre d'emploi",
+      "Préparation d'entretien générée par IA selon le poste visé",
+      "Mode démo : accès complet sans création de compte",
+      "Authentification sécurisée via Supabase Auth + RLS",
+    ],
   },
   {
     slug: "boulangerie-du-fournil",
@@ -93,11 +100,11 @@ export const PROJECTS: Project[] = [
     image: "genres.png",
     title: "Series App",
     description:
-      "Application de recherche de séries TV, acteurs et genres via l&apos;API TVMaze.",
+      "Application de recherche de séries TV, acteurs et genres via l';API TVMaze.",
     url: "https://series-app-react-rivoli.netlify.app/",
     techs: ["React"],
     longDescription:
-      "Application React utilisant l&apos;API TVMaze pour rechercher des séries télévisées, afficher leur casting, leurs genres et leurs descriptions. Interface simple et responsive.",
+      "Application React utilisant l';API TVMaze pour rechercher des séries télévisées, afficher leur casting, leurs genres et leurs descriptions. Interface simple et responsive.",
     whatILearned:
       "Exploration d'une API publique documentée, gestion de la pagination des résultats et affichage conditionnel en React.",
   },
@@ -106,11 +113,11 @@ export const PROJECTS: Project[] = [
     image: "play_screenshot.png",
     title: "Galactic Fleet",
     description:
-      "Jeu de tir spatial : contrôle un vaisseau et affronte des vagues d&apos;ennemis.",
+      "Jeu de tir spatial : contrôle un vaisseau et affronte des vagues d';ennemis.",
     url: "https://galaticfleet.netlify.app/",
     techs: ["Phaser.js"],
     longDescription:
-      "Jeu de tir en scrolling vertical développé avec Phaser.js. Le joueur contrôle un vaisseau spatial et doit survivre à des vagues d&apos;ennemis de plus en plus difficiles. Gestion des collisions, des scores et des niveaux.",
+      "Jeu de tir en scrolling vertical développé avec Phaser.js. Le joueur contrôle un vaisseau spatial et doit survivre à des vagues d';ennemis de plus en plus difficiles. Gestion des collisions, des scores et des niveaux.",
     challenges:
       "Appréhender un framework de jeu 2D (Phaser.js) très différent du développement web classique, et gérer la boucle de jeu.",
     whatILearned:
