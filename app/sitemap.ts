@@ -1,14 +1,20 @@
 import type { MetadataRoute } from "next";
+import { PROJECTS } from "@/lib/projects";
 
-const BASE_URL = "https://olivier-riviere-web.vercel.app";
+const BASE_URL = "https://portfolio-olivier-riviere.vercel.app";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const now = new Date();
 
+  const projectPages = PROJECTS.map((project) => ({
+    url: `${BASE_URL}/projects/${project.slug}`,
+    changeFrequency: "monthly" as const,
+    priority: 0.7,
+    lastModified: now,
+  }));
+
   return [
     { url: `${BASE_URL}/`, changeFrequency: "monthly", priority: 1, lastModified: now },
-    { url: `${BASE_URL}/portfolio`, changeFrequency: "monthly", priority: 0.8, lastModified: now },
-    { url: `${BASE_URL}/creation-site-internet-etapes`, changeFrequency: "yearly", priority: 0.7, lastModified: now },
-    { url: `${BASE_URL}/faq`, changeFrequency: "yearly", priority: 0.6, lastModified: now },
+    ...projectPages,
   ];
 }
