@@ -15,30 +15,44 @@
 
 @layer base {
   :root {
-    --background: 220 13% 18%;
-    --foreground: 219 14% 71%;
-    --muted: 220 12% 22%;
-    --muted-foreground: 220 12% 72%;
-    --popover: 220 13% 15%;
-    --popover-foreground: 219 14% 81%;
-    --card: 220 13% 16%;
-    --card-foreground: 219 14% 76%;
-    --border: 220 3% 23%;
-    --input: 220 3% 26%;
-    --primary: 220 13% 86%;
-    --primary-foreground: 220 13% 26%;
-    --secondary: 220 3% 25%;
-    --secondary-foreground: 220 3% 85%;
-    --accent: 220 13% 33%;
-    --accent-foreground: 220 13% 93%;
-    --destructive: 3 89% 50%;
-    --destructive-foreground: 0 0% 100%;
-    --ring: 220 13% 86%;
-    --chart-1: 220 13% 86%;
-    --chart-2: 220 3% 25%;
-    --chart-3: 220 13% 33%;
-    --chart-4: 220 3% 28%;
-    --chart-5: 220 16% 86%;
+    /* ── Fonds ── */
+    --background:         222  14% 11%;   /* Ardoise sombre légèrement bleue */
+    --card:               222  14% 14%;
+    --popover:            222  14% 12%;
+
+    /* ── Textes ── */
+    --foreground:         210  20% 90%;   /* Blanc cassé légèrement bleu — chaleureux */
+    --card-foreground:    210  18% 86%;
+    --popover-foreground: 210  20% 90%;
+    --primary:            210  20% 90%;
+    --primary-foreground: 222  14% 11%;
+
+    /* ── Secondaire / Muet ── */
+    --muted:              222  12% 18%;
+    --muted-foreground:   210  10% 55%;   /* Discret mais lisible — ratio ≈ 4.6:1 */
+    --secondary:          222  12% 21%;
+    --secondary-foreground: 210  15% 82%;
+
+    /* ── Accent BLEU ÉLECTRIQUE ── */
+    --accent:             213  95% 65%;   /* #4A9EFF — bleu vif, lumineux */
+    --accent-foreground:  222  14% 11%;   /* Texte sombre sur fond bleu */
+
+    /* ── UI ── */
+    --border:             222  10% 22%;
+    --input:              222  10% 22%;
+    --ring:               213  95% 65%;   /* Focus ring bleu électrique */
+
+    /* ── États ── */
+    --destructive:          3  89% 50%;
+    --destructive-foreground: 0   0% 100%;
+
+    /* ── Charts ── */
+    --chart-1:            213  95% 65%;
+    --chart-2:            213  70% 45%;
+    --chart-3:            222  14% 30%;
+    --chart-4:            210  20% 70%;
+    --chart-5:            222  12% 21%;
+
     --radius: 0.5rem;
   }
 }

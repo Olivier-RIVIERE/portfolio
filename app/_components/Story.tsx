@@ -17,8 +17,8 @@ export const Story = () => {
       <Card className="w-full p-4">
         <div className="flex flex-col gap-3">
           <p className="text-primary leading-relaxed">
-            Mon parcours est atypique : gendarme adjoint, contrôleur et planificateur dans les transports,
-            puis <Code>conducteur de train à la SNCF</Code>. Des métiers très différents, mais avec un fil commun —
+            <Code>Mon parcours est atypique :</Code> gendarme adjoint, contrôleur et planificateur dans les transports,
+            puis conducteur de train à la SNCF. Des métiers très différents, mais avec un fil commun —
             la rigueur, le sens des responsabilités et l&apos;habitude de gérer des situations complexes.
           </p>
 

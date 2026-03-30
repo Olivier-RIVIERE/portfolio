@@ -39,7 +39,7 @@ export default function ProjectPage({ params }: Props) {
         {/* Retour */}
         <Link
           href="/"
-          className="text-sm text-muted-foreground hover:text-primary transition-colors"
+          className="text-sm text-muted-foreground text-[hsl(var(--accent))] hover:text-[hsl(var(--accent))]"
         >
           ← Retour au portfolio
         </Link>
@@ -99,7 +99,7 @@ export default function ProjectPage({ params }: Props) {
             href={project.url}
             target="_blank"
             rel="noreferrer"
-            className="inline-flex items-center justify-center rounded-md px-5 py-2 text-sm font-medium bg-white/10 hover:bg-white/15 transition"
+            className="inline-flex items-center justify-center rounded-md px-5 py-2 text-sm font-medium text-[hsl(var(--accent))] hover:text-[hsl(var(--accent))]"
           >
             Voir le projet en ligne →
           </a>
