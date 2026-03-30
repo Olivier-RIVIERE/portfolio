@@ -21,7 +21,7 @@ export const metadata: Metadata = {
 export default function FaqPage() {
   return (
     <main className="relative min-h-screen flex flex-col">
-      <Header variant="client" />
+      <Header/>
       <Spacing size="md" />
 
       <Section className="flex flex-col gap-4 flex-1">

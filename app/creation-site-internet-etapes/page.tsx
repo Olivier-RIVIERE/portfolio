@@ -119,7 +119,7 @@ const steps = [
 export default function CreationSiteInternetEtapesPage() {
     return (
         <main className="relative">
-            <Header variant="client" />
+            <Header />
             <Spacing size="md" />
 
             <Section className="flex flex-col gap-4 max-w-3xl mx-auto">
