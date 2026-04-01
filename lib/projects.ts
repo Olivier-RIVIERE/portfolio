@@ -114,7 +114,7 @@ export const PROJECTS: Project[] = [
     image: "play_screenshot.png",
     title: "Galactic Fleet",
     description:
-      "Jeu de tir spatial : contrôle un vaisseau et affronte des vagues d';ennemis.",
+      "Jeu de tir spatial : contrôle un vaisseau et affronte des vagues d'ennemis.",
     url: "https://galaticfleet.netlify.app/",
     techs: ["Phaser.js"],
     longDescription:
