@@ -17,7 +17,7 @@ export const SideProject = (props: SideProjectProps) => {
         sizes="(max-width: 768px) 100vw, 50vw"
         className="rounded-sm mt-2 object-cover"
       />
-      <div className="absolute bottom-0 left-0 bg-black/60 p-4">
+      <div className="absolute bottom-0 left-0 bg-black/60 p-4 w-full">
         <h2 className="text-xl text-white">{props.title}</h2>
         <p className="text-xs text-white font-semibold lg:text-sm">
           {props.description}
